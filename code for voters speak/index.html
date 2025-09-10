@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voices Speak - Contact Congress with Anti-Spam Protection</title>
+    <link rel="stylesheet" href="css/styles.css">
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">📊</div>
+            <h1>Voices Speak</h1>
+            <div class="tagline">Contact Congress with Anti-Spam Protection</div>
+            <div class="country-tagline">This is your country...speak up!</div>
+        </div>
+        
+        <div class="nav-tabs">
+            <button class="nav-tab active" onclick="showTab('officials')">Congress Members</button>
+            <button class="nav-tab" onclick="showTab('bills')">Current Bills</button>
+        </div>
+        
+        <div id="officials" class="tab-content active">
+            <div class="search-container">
+                <select id="chamber-select" style="padding: 15px; font-size: 16px; border: 2px solid #e9ecef; border-radius: 10px; margin-bottom: 15px;">
+                    <option value="house">House of Representatives</option>
+                    <option value="senate">Senate</option>
+                </select>
+                <input type="text" id="search-input" class="search-input" placeholder="Search by name, state, or party..." onkeyup="searchOfficials()">
+            </div>
+            <div id="officials-list" class="officials-grid"></div>
+        </div>
+        
+        <div id="bills" class="tab-content">
+            <div class="bills-container">
+                <div id="bills-list"></div>
+            </div>
+        </div>
+        
+        <div id="email-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close" onclick="closeEmailModal()">&times;</span>
+                    <h2>Contact <span id="official-name"></span></h2>
+                    <p>Daily emails: <span id="email-count">0/5</span></p>
+                </div>
+                <form id="email-form" class="email-form" onsubmit="sendEmail(event)">
+                    <div id="form-message"></div>
+                    <div class="anti-spam-note">
+                        <strong>Anti-Spam Protection:</strong> This system includes rate limiting and verification to ensure genuine constituent communications. Limited to 5 emails per day per user.
+                    </div>
+                    <div class="form-group">
+                        <label for="user-name">Your Name *</label>
+                        <input type="text" id="user-name" name="userName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="user-email">Your Email *</label>
+                        <input type="email" id="user-email" name="userEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="user-address">Your Address *</label>
+                        <input type="text" id="user-address" name="userAddress" placeholder="123 Main St, City, State ZIP" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="official-email">Official's Email</label>
+                        <input type="email" id="official-email" name="officialEmail" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" placeholder="Please be respectful and specific in your communication..." required></textarea>
+                    </div>
+                    <button type="submit" class="send-btn">Send Email</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>
