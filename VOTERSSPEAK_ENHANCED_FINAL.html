@@ -776,6 +776,7 @@
         }
     </style>
 <script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+   <script src="enhanced-app.js"></script>
 </head>
 <body>
     <div class="container">
@@ -911,7 +912,114 @@
                 </div>
             </div>
             
-            <!-- Other branch sections would be similar -->
+            <!-- Executive Section -->
+            <div id="executive-section" class="branch-section">
+                <div class="search-filter-bar">
+                    <div class="search-container">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" class="search-input" id="executive-search" placeholder="Search executive officials...">
+                    </div>
+                    <div class="filter-container">
+                        <select class="filter-select" id="executive-party-filter">
+                            <option value="">Filter by Party</option>
+                            <option value="Democrat">Democrat</option>
+                            <option value="Republican">Republican</option>
+                            <option value="Independent">Independent</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="officials-grid" id="executive-officials">
+                    <!-- Officials will be populated by JavaScript -->
+                </div>
+                
+                <div class="pagination" id="executive-pagination">
+                    <!-- Pagination will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Cabinet Section -->
+            <div id="cabinet-section" class="branch-section">
+                <div class="search-filter-bar">
+                    <div class="search-container">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" class="search-input" id="cabinet-search" placeholder="Search cabinet members...">
+                    </div>
+                    <div class="filter-container">
+                        <select class="filter-select" id="cabinet-department-filter">
+                            <option value="">Filter by Department</option>
+                            <option value="State">State</option>
+                            <option value="Treasury">Treasury</option>
+                            <option value="Defense">Defense</option>
+                            <option value="Justice">Justice</option>
+                            <option value="Interior">Interior</option>
+                            <option value="Agriculture">Agriculture</option>
+                            <option value="Commerce">Commerce</option>
+                            <option value="Labor">Labor</option>
+                            <option value="Health and Human Services">Health and Human Services</option>
+                            <option value="Housing and Urban Development">Housing and Urban Development</option>
+                            <option value="Transportation">Transportation</option>
+                            <option value="Energy">Energy</option>
+                            <option value="Education">Education</option>
+                            <option value="Veterans Affairs">Veterans Affairs</option>
+                            <option value="Homeland Security">Homeland Security</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="officials-grid" id="cabinet-officials">
+                    <!-- Officials will be populated by JavaScript -->
+                </div>
+                
+                <div class="pagination" id="cabinet-pagination">
+                    <!-- Pagination will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Supreme Court Section -->
+            <div id="supremeCourt-section" class="branch-section">
+                <div class="search-filter-bar">
+                    <div class="search-container">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" class="search-input" id="supremeCourt-search" placeholder="Search Supreme Court justices...">
+                    </div>
+                </div>
+                
+                <div class="officials-grid" id="supremeCourt-officials">
+                    <!-- Officials will be populated by JavaScript -->
+                </div>
+                
+                <div class="pagination" id="supremeCourt-pagination">
+                    <!-- Pagination will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Agencies Section -->
+            <div id="agencies-section" class="branch-section">
+                <div class="search-filter-bar">
+                    <div class="search-container">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" class="search-input" id="agencies-search" placeholder="Search government agencies...">
+                    </div>
+                    <div class="filter-container">
+                        <select class="filter-select" id="agencies-category-filter">
+                            <option value="">Filter by Category</option>
+                            <option value="Executive">Executive Agencies</option>
+                            <option value="Independent">Independent Agencies</option>
+                            <option value="Regulatory">Regulatory Commissions</option>
+                            <option value="Advisory">Advisory Committees</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="officials-grid" id="agencies-officials">
+                    <!-- Agencies will be populated by JavaScript -->
+                </div>
+                
+                <div class="pagination" id="agencies-pagination">
+                    <!-- Pagination will be populated by JavaScript -->
+                </div>
+            </div>
         </div>
         
         <!-- Find by Address Tab (Initially Hidden) -->
