@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executive Branch - Voices Speak</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .executive-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .executive-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .executive-name {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .executive-title {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        .contact-info {
+            margin: 5px 0;
+        }
+        .btn {
+            background: #3498db;
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 4px;
+            display: inline-block;
+            margin: 5px 5px 5px 0;
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">🇺🇸</div>
+            <h1>Executive Branch</h1>
+            <div class="tagline">Contact the President & Vice President</div>
+        </div>
+        
+        <div class="executive-grid">
+            <div class="executive-card">
+                <div class="executive-name">Joe Biden</div>
+                <div class="executive-title">President of the United States</div>
+                <div class="contact-info"><strong>Email:</strong> president@whitehouse.gov</div>
+                <div class="contact-info"><strong>Phone:</strong> (202) 456-1111</div>
+                <div class="contact-info"><strong>Office:</strong> The White House, 1600 Pennsylvania Ave NW, Washington, DC 20500</div>
+                <a href="mailto:president@whitehouse.gov" class="btn">Email President</a>
+                <a href="tel:2024561111" class="btn">Call White House</a>
+            </div>
+            
+            <div class="executive-card">
+                <div class="executive-name">Kamala Harris</div>
+                <div class="executive-title">Vice President of the United States</div>
+                <div class="contact-info"><strong>Email:</strong> vicepresident@whitehouse.gov</div>
+                <div class="contact-info"><strong>Phone:</strong> (202) 456-1111</div>
+                <div class="contact-info"><strong>Office:</strong> The White House, 1600 Pennsylvania Ave NW, Washington, DC 20500</div>
+                <a href="mailto:vicepresident@whitehouse.gov" class="btn">Email VP</a>
+                <a href="tel:2024561111" class="btn">Call VP Office</a>
+            </div>
+        </div>
+        
+        <div style="text-align: center; padding: 20px;">
+            <a href="index.html" class="btn">← Back to Main Site</a>
+        </div>
+    </div>
+</body>
+</html>
