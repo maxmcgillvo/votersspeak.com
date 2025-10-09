@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executive Branch - VotersSpeak</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --background-light: #f8f9fa;
+            --text-dark: #2c3e50;
+            --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --border-radius: 8px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: var(--text-dark);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #34495e 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .executive-nav {
+            background: var(--background-light);
+            padding: 15px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .nav-btn {
+            padding: 10px 20px;
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: background 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .nav-btn:hover {
+            background: #2980b9;
+        }
+
+        .executive-content {
+            padding: 40px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+        }
+
+        .officials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .official-card {
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .official-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-header {
+            background: var(--primary-color);
+            color: white;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .official-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--secondary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .official-info h3 {
+            font-size: 1.5em;
+            margin-bottom: 5px;
+        }
+
+        .official-info p {
+            opacity: 0.9;
+            margin: 0;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            margin-bottom: 10px;
+            align-items: center;
+        }
+
+        .contact-label {
+            font-weight: bold;
+            width: 80px;
+            flex-shrink: 0;
+        }
+
+        .contact-value {
+            flex: 1;
+            color: var(--text-dark);
+        }
+
+        .contact-btn {
+            background: var(--secondary-color);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+
+        .contact-btn:hover {
+            background: #2980b9;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .social-link {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: var(--text-dark);
+            transition: background 0.3s;
+        }
+
+        .social-link:hover {
+            background: var(--secondary-color);
+            color: white;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .officials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .executive-content {
+                padding: 20px;
+            }
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🇺🇸 Executive Branch</h1>
+            <p>Connect with the President, Vice President, and Executive Officials</p>
+        </div>
+
+        <div class="executive-nav">
+            <a href="VOTERSSPEAK_ENHANCED_FINAL.html" class="nav-btn">← Back to Full Platform</a>
+            <a href="index.html" class="nav-btn">🏠 Home</a>
+        </div>
+
+        <div class="executive-content">
+            <h2 class="section-title">Executive Branch Officials</h2>
+            
+            <div class="officials-grid" id="executive-officials">
+                <div class="loading">Loading Executive officials...</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const executiveData = [
+            {
+                name: "Joe Biden",
+                title: "President of the United States",
+                party: "Democrat",
+                email: "president@whitehouse.gov",
+                phone: "(202) 456-1111",
+                office: "The White House, 1600 Pennsylvania Avenue NW, Washington, DC 20500",
+                website: "https://www.whitehouse.gov",
+                twitter: "POTUS",
+                facebook: "POTUS",
+                instagram: "potus",
+                issues: ["economy", "foreign-policy", "healthcare", "climate"]
+            },
+            {
+                name: "Kamala Harris",
+                title: "Vice President of the United States",
+                party: "Democrat",
+                email: "vicepresident@whitehouse.gov",
+                phone: "(202) 456-1111",
+                office: "The White House, 1600 Pennsylvania Avenue NW, Washington, DC 20500",
+                website: "https://www.whitehouse.gov/vp",
+                twitter: "VP",
+                facebook: "VicePresident",
+                instagram: "vp",
+                issues: ["immigration", "voting-rights", "healthcare", "education"]
+            }
+        ];
+
+        function renderExecutiveDataset() {
+            const container = document.getElementById('executive-officials');
+            container.innerHTML = executiveData.map(official => `
+                <div class="official-card">
+                    <div class="card-header">
+                        <div class="official-avatar">${official.name.split(' ').map(n => n[0]).join('')}</div>
+                        <div class="official-info">
+                            <h3>${official.name}</h3>
+                            <p>${official.title}</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="contact-item">
+                            <span class="contact-label">Party:</span>
+                            <span class="contact-value">${official.party}</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-label">Office:</span>
+                            <span class="contact-value">${official.office}</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-label">Phone:</span>
+                            <span class="contact-value">${official.phone}</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-label">Email:</span>
+                            <span class="contact-value">${official.email}</span>
+                        </div>
+                        
+                        <a href="mailto:${official.email}" class="contact-btn">📧 Contact via Email</a>
+                        <a href="tel:${official.phone.replace(/\D/g, '')}" class="contact-btn">📞 Call Office</a>
+                        
+                        <div class="social-links">
+                            ${official.website ? `<a href="${official.website}" class="social-link" target="_blank" title="Website">🌐</a>` : ''}
+                            ${official.twitter ? `<a href="https://twitter.com/${official.twitter}" class="social-link" target="_blank" title="Twitter">🐦</a>` : ''}
+                            ${official.facebook ? `<a href="https://facebook.com/${official.facebook}" class="social-link" target="_blank" title="Facebook">📘</a>` : ''}
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            renderExecutiveDataset();
+        });
+    </script>
+</body>
+</html>
