@@ -3,22 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voices Speak - Contact Congress with Anti-Spam Protection</title>
+    <title>Voices Speak - Executive Button Added</title>
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .executive-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .executive-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .executive-name {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .executive-title {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        .contact-info {
+            margin: 5px 0;
+        }
+        .btn {
+            background: #3498db;
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 4px;
+            display: inline-block;
+            margin: 5px 5px 5px 0;
+        }
+    </style>
 <script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <div class="logo">📊</div>
+            <div class="logo">🇺🇸</div>
             <h1>Voices Speak</h1>
-            <div class="tagline">Contact Congress with Anti-Spam Protection</div>
+            <div class="tagline">Contact Government Officials</div>
             <div class="country-tagline">This is your country...speak up!</div>
         </div>
         
         <div class="nav-tabs">
             <button class="nav-tab active" onclick="showTab('officials')">Congress Members</button>
             <button class="nav-tab" onclick="showTab('bills')">Current Bills</button>
+            <button class="nav-tab" onclick="showTab('executive')">Executive</button>
         </div>
         
         <div id="officials" class="tab-content active">
@@ -35,6 +73,31 @@
         <div id="bills" class="tab-content">
             <div class="bills-container">
                 <div id="bills-list"></div>
+            </div>
+        </div>
+        
+        <div id="executive" class="tab-content">
+            <h2>Executive Branch Officials</h2>
+            <div class="executive-grid">
+                <div class="executive-card">
+                    <div class="executive-name">Joe Biden</div>
+                    <div class="executive-title">President of the United States</div>
+                    <div class="contact-info"><strong>Email:</strong> president@whitehouse.gov</div>
+                    <div class="contact-info"><strong>Phone:</strong> (202) 456-1111</div>
+                    <div class="contact-info"><strong>Office:</strong> The White House, 1600 Pennsylvania Ave NW, Washington, DC 20500</div>
+                    <a href="mailto:president@whitehouse.gov" class="btn">Email President</a>
+                    <a href="tel:2024561111" class="btn">Call White House</a>
+                </div>
+                
+                <div class="executive-card">
+                    <div class="executive-name">Kamala Harris</div>
+                    <div class="executive-title">Vice President of the United States</div>
+                    <div class="contact-info"><strong>Email:</strong> vicepresident@whitehouse.gov</div>
+                    <div class="contact-info"><strong>Phone:</strong> (202) 456-1111</div>
+                    <div class="contact-info"><strong>Office:</strong> The White House, 1600 Pennsylvania Ave NW, Washington, DC 20500</div>
+                    <a href="mailto:vicepresident@whitehouse.gov" class="btn">Email VP</a>
+                    <a href="tel:2024561111" class="btn">Call VP Office</a>
+                </div>
             </div>
         </div>
         
@@ -78,8 +141,44 @@
                 </form>
             </div>
         </div>
+        
+        <script>
+            // Executive data
+            const executiveData = [
+                {
+                    name: "Joe Biden",
+                    title: "President of the United States",
+                    email: "president@whitehouse.gov",
+                    phone: "(202) 456-1111",
+                    office: "The White House, 1600 Pennsylvania Avenue NW, Washington, DC 20500"
+                },
+                {
+                    name: "Kamala Harris",
+                    title: "Vice President of the United States",
+                    email: "vicepresident@whitehouse.gov",
+                    phone: "(202) 456-1111",
+                    office: "The White House, 1600 Pennsylvania Avenue NW, Washington, DC 20500"
+                }
+            ];
+            
+            // Existing functions
+            function showTab(tabName) {
+                const tabs = document.querySelectorAll('.tab-content');
+                tabs.forEach(tab => tab.style.display = 'none');
+                
+                const buttons = document.querySelectorAll('.nav-tab');
+                buttons.forEach(btn => btn.classList.remove('active'));
+                
+                document.getElementById(tabName).style.display = 'block';
+                event.target.classList.add('active');
+            }
+            
+            // Ensure executive tab shows
+            document.addEventListener('DOMContentLoaded', function() {
+                // Executive tab functionality
+                console.log('Executive button loaded');
+            });
+        </script>
     </div>
-    
-    <script src="js/main.js"></script>
 </body>
 </html>
