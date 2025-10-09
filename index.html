@@ -3,107 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VotersSpeak - Executive Button</title>
+    <title>VotersSpeak - Executive Branch Contacts</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-            background: #f5f5f5;
+            background-color: #f5f5f5;
         }
         .header {
-            background: #2c3e50;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
             color: white;
-            padding: 20px;
+            padding: 30px;
+            border-radius: 10px;
             text-align: center;
-            border-radius: 8px;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
         .nav {
-            background: #3498db;
-            color: white;
-            padding: 15px;
-            text-align: center;
-            margin-bottom: 20px;
-            border-radius: 8px;
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
         }
-        .nav a {
+        .nav-button {
+            padding: 12px 24px;
+            background: #007bff;
             color: white;
             text-decoration: none;
-            padding: 10px 20px;
-            margin: 0 10px;
-            border-radius: 4px;
-            background: rgba(255,255,255,0.2);
-            display: inline-block;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
         }
-        .nav a:hover {
-            background: rgba(255,255,255,0.3);
+        .nav-button:hover {
+            background: #0056b3;
         }
-        .executive-section {
+        .nav-button.active {
+            background: #28a745;
+        }
+        .section {
+            display: none;
             background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             margin-bottom: 20px;
         }
-        .executive-card {
-            border: 1px solid #ddd;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 8px;
-            background: #f9f9f9;
+        .section.active {
+            display: block;
         }
-        .btn {
-            background: #3498db;
-            color: white;
-            padding: 10px 20px;
+        .official-card {
+            background: #f8f9fa;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border-left: 4px solid #007bff;
+        }
+        .contact-info {
+            margin-top: 10px;
+        }
+        .contact-info a {
+            color: #007bff;
             text-decoration: none;
-            border-radius: 4px;
-            display: inline-block;
-            margin: 5px;
+            margin-right: 15px;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
         }
     </style>
 <script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
 </head>
 <body>
     <div class="header">
-        <h1>🇺🇸 VotersSpeak - Executive Button</h1>
-        <p>Executive Branch Officials - Contact the President & VP</p>
+        <h1>🇺🇸 VotersSpeak - Executive Branch Contacts</h1>
+        <p>Contact President Biden, VP Harris, and other executive officials</p>
     </div>
 
     <div class="nav">
-        <a href="#executive">Executive Button</a>
-        <a href="#contact">Contact Officials</a>
+        <button class="nav-button active" onclick="showSection('home')">Home</button>
+        <button class="nav-button" onclick="showSection('executive')">Executive</button>
+        <button class="nav-button" onclick="showSection('about')">About</button>
     </div>
 
-    <div class="executive-section">
-        <h2>Executive Branch</h2>
+    <div id="home" class="section active">
+        <h2>Welcome to VotersSpeak</h2>
+        <p>This site provides direct contact information for executive branch officials.</p>
+        <p><strong>Click the "Executive" button above</strong> to view President Biden and VP Harris contact details.</p>
+    </div>
+
+    <div id="executive" class="section">
+        <h2>Executive Branch Officials</h2>
         
-        <div class="executive-card">
-            <h3>President Joe Biden</h3>
-            <p><strong>Title:</strong> President of the United States</p>
-            <p><strong>Email:</strong> president@whitehouse.gov</p>
-            <p><strong>Phone:</strong> (202) 456-1111</p>
-            <a href="mailto:president@whitehouse.gov" class="btn">Email President</a>
-            <a href="tel:2024561111" class="btn">Call White House</a>
+        <div class="official-card">
+            <h3>President Joseph R. Biden Jr.</h3>
+            <p><strong>Position:</strong> President of the United States</p>
+            <div class="contact-info">
+                <a href="mailto:president@whitehouse.gov">📧 Email President</a>
+                <a href="tel:+12024561414">📞 White House: (202) 456-1414</a>
+                <a href="https://www.whitehouse.gov/contact/" target="_blank">🌐 Contact Form</a>
+            </div>
         </div>
 
-        <div class="executive-card">
-            <h3>Vice President Kamala Harris</h3>
-            <p><strong>Title:</strong> Vice President of the United States</p>
-            <p><strong>Email:</strong> vicepresident@whitehouse.gov</p>
-            <p><strong>Phone:</strong> (202) 456-1111</p>
-            <a href="mailto:vicepresident@whitehouse.gov" class="btn">Email VP</a>
-            <a href="tel:2024561111" class="btn">Call VP Office</a>
+        <div class="official-card">
+            <h3>Vice President Kamala D. Harris</h3>
+            <p><strong>Position:</strong> Vice President of the United States</p>
+            <div class="contact-info">
+                <a href="mailto:vice.president@whitehouse.gov">📧 Email VP</a>
+                <a href="tel:+12024561414">📞 White House: (202) 456-1414</a>
+                <a href="https://www.whitehouse.gov/contact/" target="_blank">🌐 Contact Form</a>
+            </div>
+        </div>
+
+        <div class="official-card">
+            <h3>White House Comment Line</h3>
+            <p><strong>General Inquiries:</strong></p>
+            <div class="contact-info">
+                <a href="tel:+12024561111">📞 (202) 456-1111</a>
+                <a href="mailto:comments@whitehouse.gov">📧 comments@whitehouse.gov</a>
+            </div>
         </div>
     </div>
 
-    <div class="executive-section">
-        <h2>Executive Button Test</h2>
-        <p>This page contains the Executive button functionality.</p>
-        <p>The "Executive" button is visible in the navigation above.</p>
-        <p>Executive officials are displayed below with contact information.</p>
+    <div id="about" class="section">
+        <h2>About VotersSpeak</h2>
+        <p>VotersSpeak provides direct access to elected officials and government representatives. This site focuses on executive branch contacts for citizen engagement.</p>
+        <p><strong>Executive Button:</strong> The "Executive" tab above displays President Biden and VP Harris with complete contact information including email, phone, and web forms.</p>
     </div>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => section.classList.remove('active'));
+            
+            // Remove active class from all buttons
+            const buttons = document.querySelectorAll('.nav-button');
+            buttons.forEach(button => button.classList.remove('active'));
+            
+            // Show selected section
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Add active class to clicked button
+            event.target.classList.add('active');
+        }
+
+        // Auto-show executive section if URL has #executive
+        if (window.location.hash === '#executive') {
+            showSection('executive');
+            document.querySelector('.nav-button:nth-child(2)').classList.add('active');
+            document.querySelector('.nav-button:nth-child(1)').classList.remove('active');
+        }
+    </script>
 </body>
 </html>
